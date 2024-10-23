@@ -179,11 +179,13 @@ external_sources:
     posts:
       - url: https://mp.weixin.qq.com/s/qVxXzKJfU41kYt5lCvtBPQ
         published_date: 2024-06-14
+        title: RiskMap
 
   - name: wechat article VelocityMap
     posts:
       - url: https://mp.weixin.qq.com/s/iSJ_UG7YQnGMKCOL1nAbyQ
         published_date: 2024-09-29
+        title: VelocityMap
 
 # -----------------------------------------------------------------------------
 # Newsletter
