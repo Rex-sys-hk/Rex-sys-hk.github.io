@@ -23,6 +23,12 @@ social: true # includes social icons at the bottom of the page
 
 <!-- Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them. -->
 
-I am currently pursuing a Ph.D. degree in Robotics and Automation Systems at the Hong Kong University of Science and Technology. My primary research field is planning and control for autonomous driving. As to my educational background, I hold a Master’s degree from the Hong Kong University of Science and Technology and a Bachelor’s degree from the Ocean University of China. In the future, I aim to leverage my expertise in mechanical engineering and artificial intelligence to break the technology boundaries of intelligent systems, introducing the benefit of technology to everyone.
+I am currently pursuing a Ph.D. degree in Robotics and Automation Systems at the **Hong Kong University of Science and Technology** (HKUST) Under the supervision of [prof. Jun MA](https://personal.hkust-gz.edu.cn/junma/index.html). 
+
+My primary research field is learning based planning and control for autonomous driving. But I also have some experience on 3D reconstruction and traditional optimization/sampling based planning methods and CUDA programming. 
+
+As to my educational background, I hold a Master’s degree from the **Hong Kong University of Science and Technology** (HKUST) and a Bachelor’s degree from the **Ocean University of China** (OUC). 
+
+In the future, I aim to leverage my expertise in mechanical engineering and artificial intelligence to break the technology boundaries of intelligent systems, introducing technology to the masses.
 
 Served as reviewer for RAL, ICML, IROS, and ICRA.
