@@ -26,7 +26,7 @@ I am currently pursuing a Ph.D. degree in Robotics and Automation Systems at the
 
 My primary research field is **learning-based planning and control** for autonomous driving. I also have some experience on 3D reconstruction, traditional optimization/sampling based planning methods and CUDA programming in projects. 
 
-As to my educational background, I hold a Master’s degree from the **Hong Kong University of Science and Technology** (HKUST) and a Bachelor’s degree from the **Ocean University of China** (OUC). 
+As to my educational background, I hold an M.Sc. degree from the **Hong Kong University of Science and Technology** (HKUST) and a Bachelor’s degree from the **Ocean University of China** (OUC). 
 
 I aim to leverage my expertise in mechanical engineering and artificial intelligence to break the technology boundaries of intelligent systems, introducing technology to the masses.
 
