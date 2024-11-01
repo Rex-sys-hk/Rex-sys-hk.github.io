@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="A Generic Trajectory Planning Method for Constrained All-Wheel-Steering Robots">
+  <meta name="keywords" content="Autonomous Driving, Planning, All-Wheel-Steering">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>A Generic Trajectory Planning Method for Constrained All-Wheel-Steering Robots</title>
+
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/UST.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+    </script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <!-- <script src="./static/js/index.js"></script> -->
+</head>
+
+<body>
+
+  <!-- <nav class="navbar" role="navigation" aria-label="main navigation">
+class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+        <a class="navbar-item" href="https://keunhong.com">
+          <span class="icon">
+            <i class="fas fa-home"></i>
+          </span>
+        </a>
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            More Research
+          </a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://hypernerf.github.io">
+              HyperNeRF
+            </a>
+            <a class="navbar-item" href="https://nerfies.github.io">
+              Nerfies
+            </a>
+            <a class="navbar-item" href="https://latentfusion.github.io">
+              LatentFusion
+            </a>
+            <a class="navbar-item" href="https://photoshape.github.io">
+              PhotoShape
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </nav> -->
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-2 publication-title">
+              A Generic Trajectory Planning Method for Constrained All-Wheel-Steering Robots
+              <!-- <font style="color: royalblue;">PLUTO</font>: <font style="color: royalblue;">P</font>ushing the <font
+                style="color: royalblue;">L</font>imit of Imitation Learning-based Planning for
+              A<font style="color: royalblue;">UTO</font>nomous Driving -->
+            </h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://rex-sys-hk.github.io" target=”_blank”>Ren Xin</a>,</span>
+              <span class="author-block">
+                <a href="http://liuhongji.site" target=”_blank”>Hongji Liu</a>,</span>
+              <span class="author-block">
+                <a href="https://sites.google.com/view/chenyingbing-homepage" target=”_blank”>Yingbing Chen</a>,</span>
+              <span class="author-block">
+                <a href="https://jchengai.github.io" target=”_blank”>Jie Cheng</a>,</span>
+              <span class="author-block">
+                <a href="https://personal.hkust-gz.edu.cn/junma/index.html" target=”_blank”>Jun Ma</a>,</span>
+              <span class="author-block">
+                <a href="http://ram-lab.com" target=”_blank”>Ming Liu</a>,</span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">Hong Kong University of Science and Technology</span>
+            </div> 
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <!-- <span class="link-block">
+                <a href="https://jchengai.github.io/pluto" class="external-link button is-normal is-rounded is-gray">
+                  <span class="icon">
+                    <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span> -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2404.09677" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/Rex-sys-hk/AWSPlanning" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered" style="border-radius: 10px; padding: 10px;">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            This paper presents a generic trajectory planning method for <b>wheeled robots with fixed steering axes while the steering angle of each wheel is constrained</b>. 
+            In the existing literatures, All-Wheel-Steering (AWS) robots, incorporating modes such as rotation-free translation maneuvers, in-situ rotational maneuvers, and proportional steering, exhibit <b>inefficient performance due to time-consuming mode switches</b>. 
+            This inefficiency arises from wheel rotation constraints and inter-wheel cooperation requirements. 
+            The direct application of a holonomic moving strategy can lead to significant slip angles or even structural failure. 
+            Additionally, the limited steering range of AWS wheeled robots exacerbates non-linearity characteristics, thereby complicating control processes. 
+            To address these challenges, we developed a novel planning method termed Constrained AWS (C-AWS), which <b>integrates second-order discrete search with predictive control techniques</b>. 
+            Experimental results demonstrate that our method adeptly generates <b>feasible and smooth</b> trajectories for C-AWS while adhering to steering angle constraints.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+  <section class="section" style="margin-top: 0; padding-top: 50px;">
+    <h2 class="title is-4" style="text-align: center;">Method Overview</h2>
+    <div class="container is-max-desktop">
+      <div class="demo-block">
+        <div style="padding: 10px;">
+          <h2 class="title is-5" style="text-align: center;">Problem Identification</h2>
+          <img class="summary-img" src="static/images/problem_id.png" width="85%">
+          <div style="padding: 10px; margin-left: 30px; margin-right: 30px;">
+            <p style="text-align: left;">
+              
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="container is-max-desktop">
+      <div class="demo-block">
+        <div style="padding: 10px;">
+          <h2 class="title is-5" style="text-align: center;">Sampling-based Quasi-optimal Searching</h2>
+          <img class="summary-img" src="static/images/method1.png" width="85%">
+          <div style="padding: 10px; margin-left: 30px; margin-right: 30px;">
+            <p style="text-align: left;">
+              
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="container is-max-desktop">
+      <div class="demo-block">
+        <div style="padding: 10px;">
+          <h2 class="title is-5" style="text-align: center;">Re-formulate Kinetic Model</h2>
+          <img class="summary-img" src="static/images/method2.png" width="85%">
+          <div style="padding: 10px; margin-left: 30px; margin-right: 30px;">
+            <p style="text-align: left;">
+              
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="container is-max-desktop">
+      <div class="demo-block">
+        <div style="padding: 10px;">
+          <h2 class="title is-5" style="text-align: center;">Trajectory Smoothing Considering Constraints</h2>
+          <img class="summary-img" src="static/images/method3.png" width="85%">
+          <div style="padding: 10px; margin-left: 30px; margin-right: 30px;">
+            <p style="text-align: left;">
+              The singularity problem and solving space discontinuity in swerve kinetic model. 
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
+
+  <section class="section" style="margin-top: 0; padding-top: 50px;">
+    <h2 class="title is-4" style="text-align: center;">Qualitative Results</h2>
+    <div class="container is-max-desktop">
+    </div>
+
+
+    <div class="container is-max-desktop">
+      <div class="demo-block">
+        <!-- <div style="padding: 10px;">
+          <div style="border: solid gray; border-radius: 10px; border-width: 1px; padding: 10px;">
+            <h2 class="title is-5" style="text-align: center;">Legend</h2>
+            <img class="summary-img" src="static/images/legend.svg" width="95%">
+          </div>
+        </div> -->
+        <div class="container is-max-desktop">
+          <div class="columns is-centered">
+            <div class="column is-full-width" style="text-align: center;">
+              <p>
+                Comparison between mode-switching control (upper) and our autonomous trajectory optimization (lower).
+              </p><br>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="video-grid-1">
+          <video class="video-border" autoplay controls muted loop playsinline>
+            <source src="./static/videos/mode_compare.mp4"
+              type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="section" style="margin-top: 0; padding-top: 50px;">
+    <h2 class="title is-4" style="text-align: center;">Gallery</h2>
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-full-width" style="text-align: center;">
+          <p>
+            Examples showing efficiency and flexibility of our method.
+          </p><br>
+        </div>
+      </div>
+    </div>
+    <div class="container is-max-desktop">
+      <div class="demo-block">
+        <!-- <h2><b>Flexibility Comparison</b></h2> -->
+        <div class="video-grid-1">
+          <video class="video-border" autoplay controls muted loop playsinline>
+            <source src="./static/videos/AWS1.mp4"
+              type="video/mp4">
+          </video>
+        </div>
+        <div class="video-grid-1">
+          <video class="video-border" autoplay controls muted loop playsinline>
+            <source src="./static/videos/AWS2.mp4"
+              type="video/mp4">
+          </video>
+        </div>
+        <div class="video-grid-1">
+          <video class="video-border" autoplay controls muted loop playsinline>
+            <source src="./static/videos/AWS3.mp4"
+              type="video/mp4">
+          </video>
+        </div>
+        <div class="video-grid-1">
+          <video class="video-border" autoplay controls muted loop playsinline>
+            <source src="./static/videos/symetric.mp4"
+              type="video/mp4">
+          </video>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code></code></pre>
+    </div>
+  </section> -->
+
+
+  <footer class="footer">
+    <div class="container">
+      <!-- <div class="content has-text-centered">
+        <a class="icon-link" href="./static/videos/nerfies_paper.pdf">
+          <i class="fas fa-file-pdf"></i>
+        </a>
+        <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+          <i class="fab fa-github"></i>
+        </a>
+      </div> -->
+      <div class="columns is-centered">
+        <div class="content">
+          <p>
+            Project page is inspired by <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="text/javascript">
+    var videos = document.querySelectorAll('video');
+    for (var i = 0; i < videos.length; i++) {
+      videos[i].playbackRate = 2.0;
+    }
+  </script>
+
+</body>
+
+
+</html>

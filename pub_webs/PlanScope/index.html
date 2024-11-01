@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="PlanScope: Learning to Plan Within Decision Scope Does Matter">
+  <meta name="keywords" content="Autonomous Driving, Planning, Machine Learning">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PlanScope: Learning to Plan Within Decision Scope Does Matter</title>
+
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/UST.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+    </script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <!-- <script src="./static/js/index.js"></script> -->
+</head>
+
+<body>
+
+  <!-- <nav class="navbar" role="navigation" aria-label="main navigation">
+class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+        <a class="navbar-item" href="https://keunhong.com">
+          <span class="icon">
+            <i class="fas fa-home"></i>
+          </span>
+        </a>
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            More Research
+          </a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://hypernerf.github.io">
+              HyperNeRF
+            </a>
+            <a class="navbar-item" href="https://nerfies.github.io">
+              Nerfies
+            </a>
+            <a class="navbar-item" href="https://latentfusion.github.io">
+              LatentFusion
+            </a>
+            <a class="navbar-item" href="https://photoshape.github.io">
+              PhotoShape
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </nav> -->
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-2 publication-title">
+              A Generic Trajectory Planning Method for Constrained All-Wheel-Steering Robots
+              <!-- <font style="color: royalblue;">PLUTO</font>: <font style="color: royalblue;">P</font>ushing the <font
+                style="color: royalblue;">L</font>imit of Imitation Learning-based Planning for
+              A<font style="color: royalblue;">UTO</font>nomous Driving -->
+            </h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://rex-sys-hk.github.io" target=”_blank”>Ren Xin</a>,</span>
+              <!-- <span class="author-block">
+                <a href="http://liuhongji.site" target=”_blank”>Hongji Liu</a>,</span>
+              <span class="author-block">
+                <a href="https://sites.google.com/view/chenyingbing-homepage" target=”_blank”>Yingbing Chen</a>,</span> -->
+              <span class="author-block">
+                <a href="https://jchengai.github.io" target=”_blank”>Jie Cheng</a>,</span>
+              <span class="author-block">
+                <a href="https://personal.hkust-gz.edu.cn/junma/index.html" target=”_blank”>Jun Ma</a>,</span>
+              <!-- <span class="author-block">
+                <a href="http://ram-lab.com" target=”_blank”>Ming Liu</a>,</span> -->
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">Hong Kong University of Science and Technology</span>
+            </div> 
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <!-- <span class="link-block">
+                <a href="https://jchengai.github.io/pluto" class="external-link button is-normal is-rounded is-gray">
+                  <span class="icon">
+                    <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span> -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2404.09677" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/Rex-sys-hk/PlanScope" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered" style="border-radius: 10px; padding: 10px;">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            In the context of autonomous driving, learning-based methods have been promising for the development of planning modules.
+            During the training process of planning modules, directly minimizing the discrepancy between expert-driving logs and planning output is widely deployed. 
+            In general, driving logs consist of suddenly appearing obstacles or swiftly changing traffic signals, which typically necessitate swift and nuanced adjustments in driving maneuvers. 
+            Concurrently, future trajectories of the vehicles exhibit their long-term decisions, such as adhering to a reference lane or circumventing stationary obstacles.
+            Due to the <b>unpredictable influence of future events in driving logs, reasoning bias could be naturally introduced to learning based planning modules, which leads to a possible degradation of driving performance</b>.
+            To address this issue, we identify the decisions and their corresponding time horizons, and characterize a so-called decision scope by retaining decisions within derivable horizons only, to mitigate the effect of irrational behaviors caused by unpredictable events.
+            This framework employs <b>wavelet transformation based log preprocessing with an effective loss computation approach, rendering the planning model only sensitive to valuable decisions at the current state</b>. 
+            Since frequency domain characteristics are extracted in conjunction with time domain features by wavelets, decision information across various frequency bands within the corresponding time horizon can be suitably captured. 
+            Furthermore, to achieve valuable decision learning, this framework leverages a transformer based decoder that incrementally generates the detailed profiles of future decisions over multiple steps. 
+            Our experiments demonstrate that our proposed method outperforms baselines in terms of driving scores with closed-loop evaluations on the nuPlan dataset.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="margin-top: 0; padding-top: 50px;">
+    <h2 class="title is-4" style="text-align: center;">Method Overview</h2>
+    <div class="container is-max-desktop">
+      <div class="demo-block">
+        <div style="padding: 10px;">
+          <h2 class="title is-5" style="text-align: center;">Problem Identification</h2>
+          <img class="summary-img" src="static/images/concept.svg" width="50%">
+          <img class="summary-img" src="static/images/concept_intro.png" width="34%">
+          <div style="padding: 10px; margin-left: 30px; margin-right: 30px;">
+            <p style="text-align: left;">
+              <!-- The singularity problem and solving space discontinuity in swerve kinetic model.  -->
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+    <div class="container is-max-desktop">
+      <div class="demo-block">
+        <div style="padding: 10px;">
+          <h2 class="title is-5" style="text-align: center;">Model Framework</h2>
+          <img class="summary-img" src="static/images/framework.svg" width="84%">
+          <!-- <img class="summary-img" src="static/images/concept_details.svg" width="50%"> -->
+          <div style="padding: 10px; margin-left: 30px; margin-right: 30px;">
+            <p style="text-align: left;">
+              <!-- The singularity problem and solving space discontinuity in swerve kinetic model.  -->
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+    <div class="container is-max-desktop">
+      <div class="demo-block">
+        <div style="padding: 10px;">
+          <h2 class="title is-5" style="text-align: center;">Details of Studying Recursive Decision Refining</h2>
+          <img class="summary-img" src="static/images/RG.svg" width="84%">
+          <!-- <img class="summary-img" src="static/images/concept_details.svg" width="50%"> -->
+          <div style="padding: 10px; margin-left: 30px; margin-right: 30px;">
+            <p style="text-align: left;">
+              <!-- The singularity problem and solving space discontinuity in swerve kinetic model.  -->
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+  </section>
+
+
+
+  <section class="section" style="margin-top: 0; padding-top: 50px;">
+    <h2 class="title is-4" style="text-align: center;">Qualitative Comparison</h2>
+    <div class="container is-max-desktop">
+      <div class="demo-block">
+        <!-- <div style="padding: 10px;">
+          <div style="border: solid gray; border-radius: 10px; border-width: 1px; padding: 10px;">
+            <h2 class="title is-5" style="text-align: center;">Legend</h2>
+            <img class="summary-img" src="static/images/legend.svg" width="95%">
+          </div>
+        </div> -->
+        <div class="container is-max-desktop">
+          <div class="columns is-centered">
+            <div class="column is-full-width" style="text-align: center;">
+              <p>
+                Comparison between PLUTO (left) and our method PlanScope (right).
+              </p><br>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="video-grid-2">
+          <video class="video-border" autoplay controls muted loop playsinline>
+            <source src="./static/videos/pluto4.mp4"
+              type="video/mp4">
+          </video>
+          <video class="video-border" autoplay controls muted loop playsinline>
+            <source src="./static/videos/scope4.mp4"
+              type="video/mp4">
+          </video>
+        </div>
+        <p style="text-align: center;">
+          At the unprotected intersection, PLUTO fails to capture the sudden acceleration operation in the log replay, fearing the agent driving from opposite stopping in lane. This decision result in missing the action window and being rear-ended by the following vehicle, while PlanScope avoids the accident.
+        </p>
+
+        <br>
+
+        <div class="video-grid-2">
+          <video class="video-border" autoplay controls muted loop playsinline>
+            <source src="./static/videos/pluto1.mp4"
+              type="video/mp4">
+          </video>
+          <video class="video-border" autoplay controls muted loop playsinline>
+            <source src="./static/videos/scope1.mp4"
+              type="video/mp4">
+          </video>
+        </div>
+        <p style="text-align: center;">
+          PLUTO plans to merge into the right lane, but it extensively focuses on future plans and does not pay attention to the vehicle approaching from the right rear, which causes the collision. PlanScope focused on the right rear and briefly made an evasive maneuver.
+        </p>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="section" style="margin-top: 0; padding-top: 50px;">
+    <h2 class="title is-4" style="text-align: center;">Quantitative Comparison</h2>
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-full-width" style="text-align: center;">
+          <div class="demo-block">
+            <div style="padding: 10px;">
+              <!-- <h2 class="title is-5" style="text-align: center;">Driving Score</h2> -->
+              <img class="summary-img" src="static/images/comparison_t1.png" width="70%">
+              <div style="padding: 10px; margin-left: 30px; margin-right: 30px;">
+                <!-- <p style="text-align: left;"> -->
+                  <!-- The singularity problem and solving space discontinuity in swerve kinetic model.  -->
+                <!-- </p> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-full-width" style="text-align: center;">
+          <div class="demo-block">
+            <div style="padding: 10px;">
+              <!-- <h2 class="title is-5" style="text-align: center;">Driving Score</h2> -->
+              <img class="summary-img" src="static/images/comparison_t2.png" width="40%">
+              <div style="padding: 10px; margin-left: 30px; margin-right: 30px;">
+                <!-- <p style="text-align: left;"> -->
+                  <!-- The singularity problem and solving space discontinuity in swerve kinetic model.  -->
+                <!-- </p> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="margin-top: 0; padding-top: 50px;">
+    <h2 class="title is-4" style="text-align: center;">Gallery</h2>
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-full-width" style="text-align: center;">
+          <p>
+            Coming soon.
+          </p><br>
+        </div>
+      </div>
+    </div>
+    <div class="container is-max-desktop">
+      <div class="demo-block">
+        <!-- <h2><b>Flexibility Comparison</b></h2> -->
+        <!-- <div class="video-grid-1">
+          <video class="video-border" autoplay controls muted loop playsinline>
+            <source src="./static/videos/AWS1.mp4"
+              type="video/mp4">
+          </video>
+        </div>
+        <div class="video-grid-1">
+          <video class="video-border" autoplay controls muted loop playsinline>
+            <source src="./static/videos/AWS2.mp4"
+              type="video/mp4">
+          </video>
+        </div>
+        <div class="video-grid-1">
+          <video class="video-border" autoplay controls muted loop playsinline>
+            <source src="./static/videos/AWS3.mp4"
+              type="video/mp4">
+          </video>
+        </div>
+        <div class="video-grid-1">
+          <video class="video-border" autoplay controls muted loop playsinline>
+            <source src="./static/videos/symetric.mp4"
+              type="video/mp4">
+          </video>
+        </div> -->
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code></code></pre>
+    </div>
+  </section> -->
+
+
+  <footer class="footer">
+    <div class="container">
+      <!-- <div class="content has-text-centered">
+        <a class="icon-link" href="./static/videos/nerfies_paper.pdf">
+          <i class="fas fa-file-pdf"></i>
+        </a>
+        <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+          <i class="fab fa-github"></i>
+        </a>
+      </div> -->
+      <div class="columns is-centered">
+        <div class="content">
+          <p>
+            Project page is inspired by <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="text/javascript">
+    var videos = document.querySelectorAll('video');
+    for (var i = 0; i < videos.length; i++) {
+      videos[i].playbackRate = 2.0;
+    }
+  </script>
+
+</body>
+
+
+</html>
