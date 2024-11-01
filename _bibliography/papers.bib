@@ -6,6 +6,34 @@
 @string{icra = {Proceedings of the IEEE International Conference on Robotics and Automation}}
 @string{robio = {Proceedings of the IEEE International Conference on Robotics and Biomimetics}}
 
+@INPROCEEDINGS{xin2024generictrajectoryplanningmethod,
+  title={PlanScope: Learning to Plan Within Decision Scope Does Matter}, 
+  author={Ren Xin and Jie Cheng and Jun Ma},
+  booktitle=icra,
+  year={2025},
+  eprint={},
+  archivePrefix={arXiv},
+  primaryClass={cs.RO},
+  url={}, 
+  abstract={In the context of autonomous driving, learning-based methods have been promising for the development of planning modules.
+  During the training process of planning modules, directly minimizing the discrepancy between expert-driving logs and planning output is widely deployed. 
+  In general, driving logs consist of suddenly appearing obstacles or swiftly changing traffic signals, which typically necessitate swift and nuanced adjustments in driving maneuvers. 
+  Concurrently, future trajectories of the vehicles exhibit their long-term decisions, such as adhering to a reference lane or circumventing stationary obstacles.
+  Due to the unpredictable influence of future events in driving logs, reasoning bias could be naturally introduced to learning based planning modules, which leads to a possible degradation of driving performance.
+  To address this issue, we identify the decisions and their corresponding time horizons, and characterize a so-called decision scope by retaining decisions within derivable horizons only, to mitigate the effect of irrational behaviors caused by unpredictable events.
+  This framework employs wavelet transformation based log preprocessing with an effective loss computation approach, rendering the planning model only sensitive to valuable decisions at the current state. 
+  Since frequency domain characteristics are extracted in conjunction with time domain features by wavelets, decision information across various frequency bands within the corresponding time horizon can be suitably captured. 
+  Furthermore, to achieve valuable decision learning, this framework leverages a transformer based decoder that incrementally generates the detailed profiles of future decisions over multiple steps. 
+  Our experiments demonstrate that our proposed method outperforms baselines in terms of driving scores with closed-loop evaluations on the nuPlan dataset.},
+  selected={true},
+  bibtex_show={true},
+  code={https://github.com/Rex-sys-hk/PlanScope},
+  preview={scope_concept.svg},
+  website={/pub_webs/PlanScope/},
+  arxiv={2404.09677},
+  note={in submission},
+  }
+
 
 @INPROCEEDINGS{xin2024generictrajectoryplanningmethod,
   title={A Generic Trajectory Planning Method for Constrained All-Wheel-Steering Robots}, 
@@ -20,9 +48,8 @@
   selected={true},
   bibtex_show={true},
   code={https://github.com/Rex-sys-hk/AWSPlanning},
-  video={https://www.youtube.com/watch?v=IM7bY6Y7yms},
   preview={AWS_planner_digest.png},
-  website={},
+  website={/pub_webs/AWS_planner/},
   arxiv={2404.09677},
   note={},
   }
@@ -57,7 +84,6 @@
   keywords={Costs;Trajectory planning;Planning;Trajectory;Iterative methods;Reliability;Task analysis},
   doi={10.1109/ROBIO58561.2023.10355004},
   selected={true},
-  preview={pub_webs/velocity_field/digest.png},
   code={https://github.com/Rex-sys-hk/Velocity-Field/tree/recover},
   bibtex_show={true},
   preview={Velocity_Field_digest.png},
@@ -79,6 +105,7 @@
   selected={true},
   bibtex_show={true},
   website={https://chantsss.github.io/FCUS/},
+  preview={FCUS.png},
   }
 
 @ARTICLE{10623822,
@@ -105,7 +132,8 @@
   selected={true},
   bibtex_show={true},
   keywords={Accuracy;Roads;Self-supervised learning;Predictive models;Trajectory;History;Task analysis},
-  doi={10.1109/ICRA57147.2024.10610154}
+  doi={10.1109/ICRA57147.2024.10610154},
+  preview={POP.png},
   }
 
 @ARTICLE{10620438,
@@ -169,6 +197,7 @@
   keywords={Point cloud compression;Laser radar;Three-dimensional displays;Navigation;Robot vision systems;Radar imaging;Feature extraction},
   doi={10.1109/IROS47612.2022.9981775},
   bibtex_show={true},
+  preview={mmfn.png},
   }
   
   @INPROCEEDINGS{9051079,
