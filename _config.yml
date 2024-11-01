@@ -12,6 +12,7 @@ description: > # the ">" symbol means to ignore newlines until "footer_text:"
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
+  Photos from <a href="https://unsplash.com" target="_blank">Unsplash</a>.
 keywords: jekyll, jekyll-theme, academic-website, portfolio-website # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: ⚛️ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
@@ -139,7 +140,7 @@ lsi: false # produce an index for related posts
 
 # Pagination
 pagination:
-  enabled: true
+  enabled: false
 
 related_blog_posts:
   enabled: false
@@ -167,13 +168,24 @@ disqus_shortname: al-folio # put your disqus shortname
 # External sources.
 # If you have blog posts published on medium.com or other external sources,
 # you can display them in your blog by adding a link to the RSS feed.
-# external_sources:
+external_sources:
   # - name: medium.com
   #   rss_url: https://medium.com/@al-folio/feed
   # - name: Google Blog
   #   posts:
   #     - url: https://blog.google/technology/ai/google-gemini-update-flash-ai-assistant-io-2024/
   #       published_date: 2024-05-14
+  - name: wechat article RiskMao
+    posts:
+      - url: https://mp.weixin.qq.com/s/qVxXzKJfU41kYt5lCvtBPQ
+        published_date: 2024-06-14
+        title: RiskMap
+
+  - name: wechat article VelocityMap
+    posts:
+      - url: https://mp.weixin.qq.com/s/iSJ_UG7YQnGMKCOL1nAbyQ
+        published_date: 2024-09-29
+        title: VelocityMap
 
 # -----------------------------------------------------------------------------
 # Newsletter
@@ -242,7 +254,7 @@ exclude:
   - lighthouse_results/
   - package.json
   - package-lock.json
-  - _pages/about_einstein.md
+  # - _pages/about_einstein.md
   - purgecss.config.js
   - README.md
   - readme_preview/
@@ -372,7 +384,7 @@ filtered_bibtex_keywords:
   ]
 
 # Maximum number of authors to be shown for each publication (more authors are visible on click)
-max_author_limit: 3 # leave blank to always show all authors
+max_author_limit: 4 # leave blank to always show all authors
 more_authors_animation_delay: 10 # more authors are revealed on click using animation; smaller delay means faster animation
 
 # Enables publication thumbnails. If disabled, none of the publications will display thumbnails, even if specified in the bib entry.
