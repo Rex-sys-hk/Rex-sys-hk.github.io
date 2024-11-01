@@ -10,7 +10,7 @@ profile:
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>Think Bold.</p>
+    <p></p>
 
 news: true # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
@@ -25,7 +25,7 @@ social: true # includes social icons at the bottom of the page
 
 I am currently pursuing a Ph.D. degree in Robotics and Automation Systems at the **Hong Kong University of Science and Technology** (HKUST) Under the supervision of [prof. Jun MA](https://personal.hkust-gz.edu.cn/junma/index.html). 
 
-My primary research field is learning based planning and control for autonomous driving. I also have some experience on 3D reconstruction and traditional optimization/sampling based planning methods and CUDA programming. 
+My primary research field is **learning-based planning and control** for autonomous driving. I also have some experience on 3D reconstruction, traditional optimization/sampling based planning methods and CUDA programming in projects. 
 
 As to my educational background, I hold a Master’s degree from the **Hong Kong University of Science and Technology** (HKUST) and a Bachelor’s degree from the **Ocean University of China** (OUC). 
 
