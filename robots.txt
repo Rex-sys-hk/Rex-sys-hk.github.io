@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://rex-sys-hk.github.io/sitemap.xml
+Sitemap: https://xinren.website/sitemap.xml
