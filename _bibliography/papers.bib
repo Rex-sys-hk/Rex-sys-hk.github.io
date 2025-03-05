@@ -8,8 +8,8 @@
 
 @INPROCEEDINGS{xin2024generictrajectoryplanningmethod,
   title={PlanScope: Learning to Plan Within Decision Scope Does Matter}, 
-  author={Ren Xin and Jie Cheng and Jun Ma},
-  booktitle=icra,
+  author={Ren Xin and Jie Cheng and Hongji Liu and Jun Ma},
+  booktitle=iros,
   year={2025},
   eprint={2411.00476},
   archivePrefix={arXiv},
@@ -21,10 +21,9 @@
   Concurrently, future trajectories of the vehicles exhibit their long-term decisions, such as adhering to a reference lane or circumventing stationary obstacles.
   Due to the unpredictable influence of future events in driving logs, reasoning bias could be naturally introduced to learning based planning modules, which leads to a possible degradation of driving performance.
   To address this issue, we identify the decisions and their corresponding time horizons, and characterize a so-called decision scope by retaining decisions within derivable horizons only, to mitigate the effect of irrational behaviors caused by unpredictable events.
-  This framework employs wavelet transformation based log preprocessing with an effective loss computation approach, rendering the planning model only sensitive to valuable decisions at the current state. 
-  Since frequency domain characteristics are extracted in conjunction with time domain features by wavelets, decision information across various frequency bands within the corresponding time horizon can be suitably captured. 
-  Furthermore, to achieve valuable decision learning, this framework leverages a transformer based decoder that incrementally generates the detailed profiles of future decisions over multiple steps. 
-  Our experiments demonstrate that our proposed method outperforms baselines in terms of driving scores with closed-loop evaluations on the nuPlan dataset.},
+  Several viable implementations have been proposed, among which batch normalization along the temporal dimension is particularly effective and achieves superior performance. 
+  It consistently outperforms baseline methods in terms of driving scores, as demonstrated through closed-loop evaluations on the nuPlan dataset. 
+  Essentially, this approach accommodates an plug-and-play feature to enhance the closed-loop performance of other learning-based planning models.},
   selected={true},
   bibtex_show={true},
   code={https://github.com/Rex-sys-hk/PlanScope},
