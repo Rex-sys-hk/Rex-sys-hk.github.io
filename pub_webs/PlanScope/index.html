@@ -1,38 +1,33 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="PlanScope: Learning to Plan Within Decision Scope Does Matter" />
+    <meta name="keywords" content="Autonomous Driving, Planning, Machine Learning" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PlanScope: Learning to Plan Within Decision Scope Does Matter</title>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="description" content="PlanScope: Learning to Plan Within Decision Scope Does Matter">
-  <meta name="keywords" content="Autonomous Driving, Planning, Machine Learning">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>PlanScope: Learning to Plan Within Decision Scope Does Matter</title>
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet" />
 
+    <link rel="stylesheet" href="./static/css/bulma.min.css" />
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css" />
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css" />
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" />
+    <link rel="stylesheet" href="./static/css/index.css" />
+    <link rel="icon" href="./static/images/UST.svg" />
 
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <!-- <script src="./static/js/index.js"></script> -->
+  </head>
 
-  <link rel="stylesheet" href="./static/css/bulma.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/UST.svg">
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script type="text/javascript" id="MathJax-script" async
-    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
-    </script>
-  <script defer src="./static/js/fontawesome.all.min.js"></script>
-  <script src="./static/js/bulma-carousel.min.js"></script>
-  <script src="./static/js/bulma-slider.min.js"></script>
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <!-- <script src="./static/js/index.js"></script> -->
-</head>
-
-<body>
-
-  <!-- <nav class="navbar" role="navigation" aria-label="main navigation">
+  <body>
+    <!-- <nav class="navbar" role="navigation" aria-label="main navigation">
 class="navbar-burger" aria-label="menu" aria-expanded="false">
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
@@ -71,41 +66,36 @@ class="navbar-burger" aria-label="menu" aria-expanded="false">
     </div>
   </nav> -->
 
-
-  <section class="hero">
-    <div class="hero-body">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered">
-          <div class="column has-text-centered">
-            <h1 class="title is-2 publication-title">
-              PlanScope: Learning to Plan Within Decision Scope Does Matter
-              <!-- <font style="color: royalblue;">PLUTO</font>: <font style="color: royalblue;">P</font>ushing the <font
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered">
+            <div class="column has-text-centered">
+              <h1 class="title is-2 publication-title">
+                PlanScope: Learning to Plan Within Decision Scope Does Matter
+                <!-- <font style="color: royalblue;">PLUTO</font>: <font style="color: royalblue;">P</font>ushing the <font
                 style="color: royalblue;">L</font>imit of Imitation Learning-based Planning for
               A<font style="color: royalblue;">UTO</font>nomous Driving -->
-            </h1>
-            <div class="is-size-5 publication-authors">
-              <span class="author-block">
-                <a href="https://rex-sys-hk.github.io" target=”_blank”>Ren Xin</a>,</span>
-              <!-- <span class="author-block">
+              </h1>
+              <div class="is-size-5 publication-authors">
+                <span class="author-block"> <a href="https://rex-sys-hk.github.io" target="”_blank”">Ren Xin</a>,</span>
+                <!-- <span class="author-block">
                 <a href="http://liuhongji.site" target=”_blank”>Hongji Liu</a>,</span>
               <span class="author-block">
                 <a href="https://sites.google.com/view/chenyingbing-homepage" target=”_blank”>Yingbing Chen</a>,</span> -->
-              <span class="author-block">
-                <a href="https://jchengai.github.io" target=”_blank”>Jie Cheng</a>,</span>
-              <span class="author-block">
-                <a href="http://liuhongji.site" target=”_blank”>Hongji Liu</a>,</span>
-              <span class="author-block">
-                <a href="https://personal.hkust-gz.edu.cn/junma/index.html" target=”_blank”>Jun Ma</a>,</span>
-              <!-- <span class="author-block">
+                <span class="author-block"> <a href="https://jchengai.github.io" target="”_blank”">Jie Cheng</a>,</span>
+                <span class="author-block"> <a href="http://liuhongji.site" target="”_blank”">Hongji Liu</a>,</span>
+                <span class="author-block"> <a href="https://personal.hkust-gz.edu.cn/junma/index.html" target="”_blank”">Jun Ma</a>,</span>
+                <!-- <span class="author-block">
                 <a href="http://ram-lab.com" target=”_blank”>Ming Liu</a>,</span> -->
-            </div>
+              </div>
 
-            <div class="is-size-5 publication-authors">
-              <span class="author-block">Hong Kong University of Science and Technology</span>
-            </div> 
-            <div class="publication-links">
-              <!-- PDF Link. -->
-              <!-- <span class="link-block">
+              <div class="is-size-5 publication-authors">
+                <span class="author-block">Hong Kong University of Science and Technology</span>
+              </div>
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <!-- <span class="link-block">
                 <a href="https://jchengai.github.io/pluto" class="external-link button is-normal is-rounded is-gray">
                   <span class="icon">
                     <i class="fas fa-file-pdf"></i>
@@ -113,102 +103,105 @@ class="navbar-burger" aria-label="menu" aria-expanded="false">
                   <span>Paper</span>
                 </a>
               </span> -->
-              <span class="link-block">
-                <a href="https://arxiv.org/abs/2411.00476" target="_blank" class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
-              <!-- Code Link. -->
-              <span class="link-block">
-                <a href="https://github.com/Rex-sys-hk/PlanScope" target="_blank" class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="fab fa-github"></i>
-                  </span>
-                  <span>Code</span>
-                </a>
-              </span>
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2411.00476" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+                <!-- Code Link. -->
+                <span class="link-block">
+                  <a href="https://github.com/Rex-sys-hk/PlanScope" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section">
-    <div class="container is-max-desktop">
-      <!-- Abstract. -->
-      <div class="columns is-centered has-text-centered" style="border-radius: 10px; padding: 10px;">
-        <div class="column is-four-fifths">
-          <h2 class="title is-3">Abstract</h2>
-          <div class="content has-text-justified">
-            In the context of autonomous driving, learning-based methods have been promising for the development of planning modules.
-            During the training process of planning modules, directly minimizing the discrepancy between expert-driving logs and planning output is widely deployed. 
-            In general, driving logs consist of suddenly appearing obstacles or swiftly changing traffic signals, which typically necessitate swift and nuanced adjustments in driving maneuvers. 
-            Concurrently, future trajectories of the vehicles exhibit their long-term decisions, such as adhering to a reference lane or circumventing stationary obstacles.
-            Due to the unpredictable influence of future events in driving logs, reasoning bias could be naturally introduced to learning based planning modules, which leads to a possible degradation of driving performance.
-            To address this issue, we identify the decisions and their corresponding time horizons, and characterize a so-called decision scope by retaining decisions within derivable horizons only, to mitigate the effect of irrational behaviors caused by unpredictable events.
-            Several viable implementations have been proposed, among which batch normalization along the temporal dimension is particularly effective and achieves superior performance. 
-            It consistently outperforms baseline methods in terms of driving scores, as demonstrated through closed-loop evaluations on the nuPlan dataset. 
-            Essentially, this approach accommodates an appealing plug-and-play feature to enhance the closed-loop performance of other learning-based planning models.
+    <section class="section">
+      <div class="container is-max-desktop">
+        <!-- Abstract. -->
+        <div class="columns is-centered has-text-centered" style="border-radius: 10px; padding: 10px">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Abstract</h2>
+            <div class="content has-text-justified">
+              In the context of autonomous driving, learning-based methods have been promising for the development of planning modules. During the
+              training process of planning modules, directly minimizing the discrepancy between expert-driving logs and planning output is widely
+              deployed. In general, driving logs consist of suddenly appearing obstacles or swiftly changing traffic signals, which typically
+              necessitate swift and nuanced adjustments in driving maneuvers. Concurrently, future trajectories of the vehicles exhibit their
+              long-term decisions, such as adhering to a reference lane or circumventing stationary obstacles. Due to the unpredictable influence of
+              future events in driving logs, reasoning bias could be naturally introduced to learning based planning modules, which leads to a
+              possible degradation of driving performance. To address this issue, we identify the decisions and their corresponding time horizons, and
+              characterize a so-called decision scope by retaining decisions within derivable horizons only, to mitigate the effect of irrational
+              behaviors caused by unpredictable events. Several viable implementations have been proposed, among which batch normalization along the
+              temporal dimension is particularly effective and achieves superior performance. It consistently outperforms baseline methods in terms of
+              driving scores, as demonstrated through closed-loop evaluations on the nuPlan dataset. Essentially, this approach accommodates an
+              appealing plug-and-play feature to enhance the closed-loop performance of other learning-based planning models.
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section" style="margin-top: 0; padding-top: 50px;">
-    <h2 class="title is-4" style="text-align: center;">Method Overview</h2>
-    <div class="container is-max-desktop">
-      <div class="demo-block">
-        <div style="padding: 10px;">
-          <h2 class="title is-5" style="text-align: center;">Problem Identification</h2>
-          <img class="summary-img" src="static/images/concept.svg" width="50%">
-          <img class="summary-img" src="static/images/concept_intro.png" width="34%">
-          <div style="padding: 10px; margin-left: 30px; margin-right: 30px;">
-            <p style="text-align: left;">
-              <!-- The singularity problem and solving space discontinuity in swerve kinetic model.  -->
-            </p>
+    <section class="section" style="margin-top: 0; padding-top: 50px">
+      <h2 class="title is-4" style="text-align: center">Method Overview</h2>
+      <div class="container is-max-desktop">
+        <div class="demo-block">
+          <div style="padding: 10px">
+            <h2 class="title is-5" style="text-align: center">Problem Identification</h2>
+            <img class="summary-img" src="static/images/concept.svg" width="50%" />
+            <img class="summary-img" src="static/images/concept_intro.png" width="34%" />
+            <div style="padding: 10px; margin-left: 30px; margin-right: 30px">
+              <p style="text-align: left">
+                <!-- The singularity problem and solving space discontinuity in swerve kinetic model.  -->
+              </p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <br>
+      <br />
 
-    <div class="container is-max-desktop">
-      <div class="demo-block">
-        <div style="padding: 10px;">
-          <h2 class="title is-5" style="text-align: center;">Model Framework</h2>
-          <img class="summary-img" src="static/images/framework2.png" width="100%">
-          <!-- <img class="summary-img" src="static/images/concept_details.svg" width="50%"> -->
-          <div style="padding: 10px; margin-left: 30px; margin-right: 30px;">
-            <p style="text-align: left;">
-              <!-- The singularity problem and solving space discontinuity in swerve kinetic model.  -->
-            </p>
+      <div class="container is-max-desktop">
+        <div class="demo-block">
+          <div style="padding: 10px">
+            <h2 class="title is-5" style="text-align: center">Model Framework</h2>
+            <img class="summary-img" src="static/images/framework2.png" width="100%" />
+            <!-- <img class="summary-img" src="static/images/concept_details.svg" width="50%"> -->
+            <div style="padding: 10px; margin-left: 30px; margin-right: 30px">
+              <p style="text-align: left">
+                <!-- The singularity problem and solving space discontinuity in swerve kinetic model.  -->
+              </p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <br>
-    <div class="container is-max-desktop">
-      <div class="demo-block">
-        <div style="padding: 10px;">
-          <h2 class="title is-5" style="text-align: center;">Candidate Approaches</h2>
-          <img class="summary-img" src="static/images/exploration.png" width="100%">
-          <!-- <img class="summary-img" src="static/images/concept_details.svg" width="50%"> -->
-          <div style="padding: 10px; margin-left: 30px; margin-right: 30px;">
-            <p style="text-align: left;">
-              <!-- The singularity problem and solving space discontinuity in swerve kinetic model.  -->
-            </p>
+      <br />
+      <div class="container is-max-desktop">
+        <div class="demo-block">
+          <div style="padding: 10px">
+            <h2 class="title is-5" style="text-align: center">Candidate Approaches</h2>
+            <img class="summary-img" src="static/images/exploration.png" width="100%" />
+            <!-- <img class="summary-img" src="static/images/concept_details.svg" width="50%"> -->
+            <div style="padding: 10px; margin-left: 30px; margin-right: 30px">
+              <p style="text-align: left">
+                <!-- The singularity problem and solving space discontinuity in swerve kinetic model.  -->
+              </p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <br>
+      <br />
 
-    <!-- <div class="container is-max-desktop">
+      <!-- <div class="container is-max-desktop">
       <div class="demo-block">
         <div style="padding: 10px;">
           <h2 class="title is-5" style="text-align: center;">Details of Recursive Decision Refining</h2>
@@ -221,186 +214,166 @@ class="navbar-burger" aria-label="menu" aria-expanded="false">
       </div>
     </div>
     <br> -->
+    </section>
 
-  </section>
-
-
-
-  <section class="section" style="margin-top: 0; padding-top: 50px;">
-    <h2 class="title is-4" style="text-align: center;">Qualitative Comparison</h2>
-    <div class="container is-max-desktop">
-      <div class="demo-block">
-        <!-- <div style="padding: 10px;">
+    <section class="section" style="margin-top: 0; padding-top: 50px">
+      <h2 class="title is-4" style="text-align: center">Qualitative Comparison</h2>
+      <div class="container is-max-desktop">
+        <div class="demo-block">
+          <!-- <div style="padding: 10px;">
           <div style="border: solid gray; border-radius: 10px; border-width: 1px; padding: 10px;">
             <h2 class="title is-5" style="text-align: center;">Legend</h2>
             <img class="summary-img" src="static/images/legend.svg" width="95%">
           </div>
         </div> -->
-        <div class="container is-max-desktop">
-          <div class="columns is-centered">
-            <div class="column is-full-width" style="text-align: center;">
-              <p>
-                Comparison between PLUTO-m12-C (left), PlanScope-Th20-m12-C (mid) and our method PlanScope-timenorm-m12-C (right).
-              </p><br>
+          <div class="container is-max-desktop">
+            <div class="columns is-centered">
+              <div class="column is-full-width" style="text-align: center">
+                <p>Comparison between PLUTO-m12-C (left), PlanScope-Th20-m12-C (mid) and our method PlanScope-timenorm-m12-C (right).</p>
+                <br />
+              </div>
             </div>
           </div>
+
+          <div class="video-grid-3">
+            <video class="video-border" autoplay controls muted loop playsinline>
+              <source src="./static/videos/pluto/9-2021.06.28.21.29.39_veh-12_01856_02160_ac67e458c88d5d78.mp4" type="video/mp4" />
+            </video>
+            <video class="video-border" autoplay controls muted loop playsinline>
+              <source src="./static/videos/th20/9-2021.06.28.21.29.39_veh-12_01856_02160_ac67e458c88d5d78.mp4" type="video/mp4" />
+            </video>
+            <video class="video-border" autoplay controls muted loop playsinline>
+              <source src="./static/videos/scope/9-2021.06.28.21.29.39_veh-12_01856_02160_ac67e458c88d5d78.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <p style="text-align: center">
+            PLUTO fails to make a timely response to the impending collision in the short-term, but chooses to continue along the long-term decision,
+            Th20 fails to make predictive decision, while PlanScope makes the timely yielding maneuver.
+          </p>
+
+          <br />
+
+          <div class="video-grid-3">
+            <video class="video-border" autoplay controls muted loop playsinline>
+              <source src="./static/videos/pluto/12-2021.06.28.17.13.34_veh-16_04046_04493_a489a4faafbd5c67.mp4" type="video/mp4" />
+            </video>
+            <video class="video-border" autoplay controls muted loop playsinline>
+              <source src="./static/videos/th20/12-2021.06.28.17.13.34_veh-16_04046_04493_a489a4faafbd5c67.mp4" type="video/mp4" />
+            </video>
+            <video class="video-border" autoplay controls muted loop playsinline>
+              <source src="./static/videos/scope/12-2021.06.28.17.13.34_veh-16_04046_04493_a489a4faafbd5c67.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <p style="text-align: center">
+            PLUTO adopts a conservative decision due to the high uncertainty of the future trajectory caused by interaction with the rear vehicle in a
+            long time horizon, while PlanScope successfully adopts human-like lane change decision.
+          </p>
+          <br />
+
+          <div class="video-grid-3">
+            <video class="video-border" autoplay controls muted loop playsinline>
+              <source src="./static/videos/pluto/4-2021.09.22.03.46.15_veh-51_00553_00813_3094b2c29265536a.mp4" type="video/mp4" />
+            </video>
+            <video class="video-border" autoplay controls muted loop playsinline>
+              <source src="./static/videos/th20/4-2021.09.22.03.46.15_veh-51_00553_00813_3094b2c29265536a.mp4" type="video/mp4" />
+            </video>
+            <video class="video-border" autoplay controls muted loop playsinline>
+              <source src="./static/videos/scope/4-2021.09.22.03.46.15_veh-51_00553_00813_3094b2c29265536a.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <p style="text-align: center">
+            In the above scenario, planning considering PlanScope can enhance the precision of vehicle control and reduce the deviation from the
+            reference route.
+          </p>
+          <br />
+
+          <div class="video-grid-3">
+            <video class="video-border" autoplay controls muted loop playsinline>
+              <source src="./static/videos/pluto/13-2021.06.28.15.59.39_veh-47_01555_03368_8efa8475e103598e.mp4" type="video/mp4" />
+            </video>
+            <video class="video-border" autoplay controls muted loop playsinline>
+              <source src="./static/videos/th20/13-2021.06.28.15.59.39_veh-47_01555_03368_8efa8475e103598e.mp4" type="video/mp4" />
+            </video>
+            <video class="video-border" autoplay controls muted loop playsinline>
+              <source src="./static/videos/scope/13-2021.06.28.15.59.39_veh-47_01555_03368_8efa8475e103598e.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <p style="text-align: center">
+            Similar to the previous scenario, considering PlanScope enables more precise adjustments of driving status and timely return to the
+            reference lane. However, for PLUTO, its pursuit of long-term targets even leads to deviation between the starting point of the planning
+            trajectory and the current position of the self-driving vehicle.
+          </p>
         </div>
-
-
-        <div class="video-grid-3">
-          <video class="video-border" autoplay controls muted loop playsinline>
-            <source src="./static/videos/pluto/9-2021.06.28.21.29.39_veh-12_01856_02160_ac67e458c88d5d78.mp4"
-              type="video/mp4">
-          </video>
-          <video class="video-border" autoplay controls muted loop playsinline>
-            <source src="./static/videos/th20/9-2021.06.28.21.29.39_veh-12_01856_02160_ac67e458c88d5d78.mp4"
-              type="video/mp4">
-          </video>
-          <video class="video-border" autoplay controls muted loop playsinline>
-            <source src="./static/videos/scope/9-2021.06.28.21.29.39_veh-12_01856_02160_ac67e458c88d5d78.mp4"
-              type="video/mp4">
-          </video>
-        </div>
-        <p style="text-align: center;">
-          PLUTO fails to make a timely response to the impending collision in the short-term, but chooses to continue along the long-term decision, Th20 fails to make predictive decision, while PlanScope makes the timely yielding maneuver.
-        </p>
-
-        <br>
-
-        <div class="video-grid-3">
-          <video class="video-border" autoplay controls muted loop playsinline>
-            <source src="./static/videos/pluto/12-2021.06.28.17.13.34_veh-16_04046_04493_a489a4faafbd5c67.mp4"
-              type="video/mp4">
-          </video>
-          <video class="video-border" autoplay controls muted loop playsinline>
-            <source src="./static/videos/th20/12-2021.06.28.17.13.34_veh-16_04046_04493_a489a4faafbd5c67.mp4"
-              type="video/mp4">
-          </video>
-          <video class="video-border" autoplay controls muted loop playsinline>
-            <source src="./static/videos/scope/12-2021.06.28.17.13.34_veh-16_04046_04493_a489a4faafbd5c67.mp4"
-              type="video/mp4">
-          </video>
-        </div>
-        <p style="text-align: center;">
-          PLUTO adopts a conservative decision due to the high uncertainty of the future trajectory caused by interaction with the rear vehicle in a long time horizon, while PlanScope successfully adopts human-like lane change decision.
-        </p>
-        <br>
-
-        <div class="video-grid-3">
-          <video class="video-border" autoplay controls muted loop playsinline>
-            <source src="./static/videos/pluto/4-2021.09.22.03.46.15_veh-51_00553_00813_3094b2c29265536a.mp4"
-              type="video/mp4">
-          </video>
-          <video class="video-border" autoplay controls muted loop playsinline>
-            <source src="./static/videos/th20/4-2021.09.22.03.46.15_veh-51_00553_00813_3094b2c29265536a.mp4"
-              type="video/mp4">
-          </video>
-          <video class="video-border" autoplay controls muted loop playsinline>
-            <source src="./static/videos/scope/4-2021.09.22.03.46.15_veh-51_00553_00813_3094b2c29265536a.mp4"
-              type="video/mp4">
-          </video>
-        </div>
-        <p style="text-align: center;">
-          In the above scenario, planning considering PlanScope can enhance the precision of vehicle control and reduce the deviation from the reference route.
-        </p>
-        <br>
-
-        <div class="video-grid-3">
-          <video class="video-border" autoplay controls muted loop playsinline>
-            <source src="./static/videos/pluto/13-2021.06.28.15.59.39_veh-47_01555_03368_8efa8475e103598e.mp4"
-              type="video/mp4">
-          </video>
-          <video class="video-border" autoplay controls muted loop playsinline>
-            <source src="./static/videos/th20/13-2021.06.28.15.59.39_veh-47_01555_03368_8efa8475e103598e.mp4"
-              type="video/mp4">
-          </video>
-          <video class="video-border" autoplay controls muted loop playsinline>
-            <source src="./static/videos/scope/13-2021.06.28.15.59.39_veh-47_01555_03368_8efa8475e103598e.mp4"
-              type="video/mp4">
-          </video>
-        </div>
-        <p style="text-align: center;">
-          Similar to the previous scenario, considering PlanScope enables more precise adjustments of driving status and timely return to the reference lane. However, for PLUTO, its pursuit of long-term targets even leads to deviation between the starting point of the planning trajectory and the current position of the self-driving vehicle.
-        </p>
       </div>
-    </div>
+    </section>
 
-  </section>
-
-  <section class="section" style="margin-top: 0; padding-top: 50px;">
-    <h2 class="title is-4" style="text-align: center;">Quantitative Comparison</h2>
-    <div class="container is-max-desktop">
-      <div class="columns is-centered">
-        <div class="column is-full-width" style="text-align: center;">
-          <div class="demo-block">
-            <div style="padding: 10px;">
-              <!-- <h2 class="title is-5" style="text-align: center;">Driving Score</h2> -->
-              <img class="summary-img" src="static/images/comparison_t1_2.png" width="80%">
-              <div style="padding: 10px; margin-left: 30px; margin-right: 30px;">
-                <p style="text-align: left;">
-                  Experiments conducted on 20% of nuPlan dataset and evaluated on Random14 test dataset.
-                  From where we can observe:
-                  Too long and too short horizon both result in worse performance.
-                  Temporal loss weighting works. 
-                  Time dependent normalization is compatible with contrastive learning. 
-                  MDD+DWH and IDD+DWT are also able to surpass baseline.
-                </p>
+    <section class="section" style="margin-top: 0; padding-top: 50px">
+      <h2 class="title is-4" style="text-align: center">Quantitative Comparison</h2>
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column is-full-width" style="text-align: center">
+            <div class="demo-block">
+              <div style="padding: 10px">
+                <!-- <h2 class="title is-5" style="text-align: center;">Driving Score</h2> -->
+                <img class="summary-img" src="static/images/comparison_t1_2.png" width="80%" />
+                <div style="padding: 10px; margin-left: 30px; margin-right: 30px">
+                  <p style="text-align: left">
+                    Experiments conducted on 20% of nuPlan dataset and evaluated on Random14 test dataset. From where we can observe: Too long and too
+                    short horizon both result in worse performance. Temporal loss weighting works. Time dependent normalization is compatible with
+                    contrastive learning. MDD+DWH and IDD+DWT are also able to surpass baseline.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="container is-max-desktop">
-      <div class="columns is-centered">
-        <div class="column is-full-width" style="text-align: center;">
-          <div class="demo-block">
-            <div style="padding: 10px;">
-              <!-- <h2 class="title is-5" style="text-align: center;">Driving Score</h2> -->
-              <img class="summary-img" src="static/images/comparison_t2_2.png" width="100%">
-              <div style="padding: 10px; margin-left: 30px; margin-right: 30px;">
-                <!-- <p style="text-align: left;"> -->
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column is-full-width" style="text-align: center">
+            <div class="demo-block">
+              <div style="padding: 10px">
+                <!-- <h2 class="title is-5" style="text-align: center;">Driving Score</h2> -->
+                <img class="summary-img" src="static/images/comparison_t2_2.png" width="100%" />
+                <div style="padding: 10px; margin-left: 30px; margin-right: 30px">
+                  <!-- <p style="text-align: left;"> -->
                   <!-- The singularity problem and solving space discontinuity in swerve kinetic model.  -->
-                <!-- </p> -->
+                  <!-- </p> -->
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section" style="margin-top: 0; padding-top: 50px;">
-    <h2 class="title is-4" style="text-align: center;">Gallery</h2>
-    <h2 class="title is-4" style="text-align: center;">PLUTO-m12-C | PlanScope-Th20-m12-C | PlanScope-timenorm-m12-C</h2>
+    <section class="section" style="margin-top: 0; padding-top: 50px">
+      <h2 class="title is-4" style="text-align: center">Gallery</h2>
+      <h2 class="title is-4" style="text-align: center">PLUTO-m12-C | PlanScope-Th20-m12-C | PlanScope-timenorm-m12-C</h2>
 
-    <div class="container is-max-desktop">
-      <div class="columns is-centered">
-        <div class="column is-full-width" style="text-align: center;">
-
-          <!-- <p>
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column is-full-width" style="text-align: center">
+            <!-- <p>
             Coming soon.
           </p><br> -->
+          </div>
         </div>
       </div>
-    </div>
-    <div class="container is-max-desktop">
-      <div class="demo-block">
-        <!-- <h2><b>Flexibility Comparison</b></h2> -->
-        <div class="video-grid-3">
-          <video class="video-border" autoplay controls muted loop playsinline>
-            <source src="./static/videos/pluto/0-2021.05.25.16.37.23_veh-25_01099_01453_81ecd0ddcc4e5c1f.mp4"
-              type="video/mp4">
-          </video>
-          <video class="video-border" autoplay controls muted loop playsinline>
-            <source src="./static/videos/th20/0-2021.05.25.16.37.23_veh-25_01099_01453_81ecd0ddcc4e5c1f.mp4"
-              type="video/mp4">
-          </video>
-          <video class="video-border" autoplay controls muted loop playsinline>
-            <source src="./static/videos/scope/0-2021.05.25.16.37.23_veh-25_01099_01453_81ecd0ddcc4e5c1f.mp4"
-              type="video/mp4">
-          </video>
-          <!-- <video class="video-border" autoplay controls muted loop playsinline>
+      <div class="container is-max-desktop">
+        <div class="demo-block">
+          <!-- <h2><b>Flexibility Comparison</b></h2> -->
+          <div class="video-grid-3">
+            <video class="video-border" autoplay controls muted loop playsinline>
+              <source src="./static/videos/pluto/0-2021.05.25.16.37.23_veh-25_01099_01453_81ecd0ddcc4e5c1f.mp4" type="video/mp4" />
+            </video>
+            <video class="video-border" autoplay controls muted loop playsinline>
+              <source src="./static/videos/th20/0-2021.05.25.16.37.23_veh-25_01099_01453_81ecd0ddcc4e5c1f.mp4" type="video/mp4" />
+            </video>
+            <video class="video-border" autoplay controls muted loop playsinline>
+              <source src="./static/videos/scope/0-2021.05.25.16.37.23_veh-25_01099_01453_81ecd0ddcc4e5c1f.mp4" type="video/mp4" />
+            </video>
+            <!-- <video class="video-border" autoplay controls muted loop playsinline>
             <source src="./static/videos/pluto/1-2021.10.06.07.54.27_veh-49_00391_00875_0393fbf49cd55295.mp4"
               type="video/mp4">
           </video>
@@ -408,31 +381,25 @@ class="navbar-burger" aria-label="menu" aria-expanded="false">
             <source src="./static/videos/scope/1-2021.10.06.07.54.27_veh-49_00391_00875_0393fbf49cd55295.mp4"
               type="video/mp4">
           </video> -->
-          <video class="video-border" autoplay controls muted loop playsinline>
-            <source src="./static/videos/pluto/2-2021.10.06.04.07.24_veh-49_00776_01719_b85af6bc62cf5e03.mp4"
-              type="video/mp4">
-          </video>
-          <video class="video-border" autoplay controls muted loop playsinline>
-            <source src="./static/videos/th20/2-2021.10.06.04.07.24_veh-49_00776_01719_b85af6bc62cf5e03.mp4"
-              type="video/mp4">
-          </video>
-          <video class="video-border" autoplay controls muted loop playsinline>
-            <source src="./static/videos/scope/2-2021.10.06.04.07.24_veh-49_00776_01719_b85af6bc62cf5e03.mp4"
-              type="video/mp4">
-          </video>          
-          <video class="video-border" autoplay controls muted loop playsinline>
-            <source src="./static/videos/pluto/3-2021.05.25.14.26.37_veh-27_00753_01258_6c6ddf6740d355ef.mp4"
-              type="video/mp4">
-          </video>
-          <video class="video-border" autoplay controls muted loop playsinline>
-            <source src="./static/videos/th20/3-2021.05.25.14.26.37_veh-27_00753_01258_6c6ddf6740d355ef.mp4"
-              type="video/mp4">
-          </video>
-          <video class="video-border" autoplay controls muted loop playsinline>
-            <source src="./static/videos/scope/3-2021.05.25.14.26.37_veh-27_00753_01258_6c6ddf6740d355ef.mp4"
-              type="video/mp4">
-          </video>          
-          <!-- <video class="video-border" autoplay controls muted loop playsinline>
+            <video class="video-border" autoplay controls muted loop playsinline>
+              <source src="./static/videos/pluto/2-2021.10.06.04.07.24_veh-49_00776_01719_b85af6bc62cf5e03.mp4" type="video/mp4" />
+            </video>
+            <video class="video-border" autoplay controls muted loop playsinline>
+              <source src="./static/videos/th20/2-2021.10.06.04.07.24_veh-49_00776_01719_b85af6bc62cf5e03.mp4" type="video/mp4" />
+            </video>
+            <video class="video-border" autoplay controls muted loop playsinline>
+              <source src="./static/videos/scope/2-2021.10.06.04.07.24_veh-49_00776_01719_b85af6bc62cf5e03.mp4" type="video/mp4" />
+            </video>
+            <video class="video-border" autoplay controls muted loop playsinline>
+              <source src="./static/videos/pluto/3-2021.05.25.14.26.37_veh-27_00753_01258_6c6ddf6740d355ef.mp4" type="video/mp4" />
+            </video>
+            <video class="video-border" autoplay controls muted loop playsinline>
+              <source src="./static/videos/th20/3-2021.05.25.14.26.37_veh-27_00753_01258_6c6ddf6740d355ef.mp4" type="video/mp4" />
+            </video>
+            <video class="video-border" autoplay controls muted loop playsinline>
+              <source src="./static/videos/scope/3-2021.05.25.14.26.37_veh-27_00753_01258_6c6ddf6740d355ef.mp4" type="video/mp4" />
+            </video>
+            <!-- <video class="video-border" autoplay controls muted loop playsinline>
             <source src="./static/videos/pluto/4-2021.09.22.03.46.15_veh-51_00553_00813_3094b2c29265536a.mp4"
               type="video/mp4">
           </video>
@@ -440,7 +407,7 @@ class="navbar-burger" aria-label="menu" aria-expanded="false">
             <source src="./static/videos/scope/4-2021.09.22.03.46.15_veh-51_00553_00813_3094b2c29265536a.mp4"
               type="video/mp4">
           </video>           -->
-          <!-- <video class="video-border" autoplay controls muted loop playsinline>
+            <!-- <video class="video-border" autoplay controls muted loop playsinline>
             <source src="./static/videos/pluto/5-2021.09.16.21.13.20_veh-45_00680_01017_38e301b3cbad5707.mp4"
               type="video/mp4">
           </video>
@@ -448,43 +415,34 @@ class="navbar-burger" aria-label="menu" aria-expanded="false">
             <source src="./static/videos/scope/5-2021.09.16.21.13.20_veh-45_00680_01017_38e301b3cbad5707.mp4"
               type="video/mp4">
           </video>           -->
-          <video class="video-border" autoplay controls muted loop playsinline>
-            <source src="./static/videos/pluto/6-2021.09.16.18.31.12_veh-45_00938_01128_843eb1eee80b529e.mp4"
-              type="video/mp4">
-          </video>
-          <video class="video-border" autoplay controls muted loop playsinline>
-            <source src="./static/videos/th20/6-2021.09.16.18.31.12_veh-45_00938_01128_843eb1eee80b529e.mp4"
-              type="video/mp4">
-          </video>
-          <video class="video-border" autoplay controls muted loop playsinline>
-            <source src="./static/videos/scope/6-2021.09.16.18.31.12_veh-45_00938_01128_843eb1eee80b529e.mp4"
-              type="video/mp4">
-          </video>          
-          <video class="video-border" autoplay controls muted loop playsinline>
-            <source src="./static/videos/pluto/7-2021.09.16.15.00.21_veh-45_00806_01354_5051ccd75314515c.mp4"
-              type="video/mp4">
-          </video>
-          <video class="video-border" autoplay controls muted loop playsinline>
-            <source src="./static/videos/th20/7-2021.09.16.15.00.21_veh-45_00806_01354_5051ccd75314515c.mp4"
-              type="video/mp4">
-          </video>
-          <video class="video-border" autoplay controls muted loop playsinline>
-            <source src="./static/videos/scope/7-2021.09.16.15.00.21_veh-45_00806_01354_5051ccd75314515c.mp4"
-              type="video/mp4">
-          </video>          
-          <video class="video-border" autoplay controls muted loop playsinline>
-            <source src="./static/videos/pluto/8-2021.09.16.13.05.51_veh-42_01597_01965_4aeaa8bebf7a57f1.mp4"
-              type="video/mp4">
-          </video>
-          <video class="video-border" autoplay controls muted loop playsinline>
-            <source src="./static/videos/th20/8-2021.09.16.13.05.51_veh-42_01597_01965_4aeaa8bebf7a57f1.mp4"
-              type="video/mp4">
-          </video>
-          <video class="video-border" autoplay controls muted loop playsinline>
-            <source src="./static/videos/scope/8-2021.09.16.13.05.51_veh-42_01597_01965_4aeaa8bebf7a57f1.mp4"
-              type="video/mp4">
-          </video>
-          <!-- <video class="video-border" autoplay controls muted loop playsinline>
+            <video class="video-border" autoplay controls muted loop playsinline>
+              <source src="./static/videos/pluto/6-2021.09.16.18.31.12_veh-45_00938_01128_843eb1eee80b529e.mp4" type="video/mp4" />
+            </video>
+            <video class="video-border" autoplay controls muted loop playsinline>
+              <source src="./static/videos/th20/6-2021.09.16.18.31.12_veh-45_00938_01128_843eb1eee80b529e.mp4" type="video/mp4" />
+            </video>
+            <video class="video-border" autoplay controls muted loop playsinline>
+              <source src="./static/videos/scope/6-2021.09.16.18.31.12_veh-45_00938_01128_843eb1eee80b529e.mp4" type="video/mp4" />
+            </video>
+            <video class="video-border" autoplay controls muted loop playsinline>
+              <source src="./static/videos/pluto/7-2021.09.16.15.00.21_veh-45_00806_01354_5051ccd75314515c.mp4" type="video/mp4" />
+            </video>
+            <video class="video-border" autoplay controls muted loop playsinline>
+              <source src="./static/videos/th20/7-2021.09.16.15.00.21_veh-45_00806_01354_5051ccd75314515c.mp4" type="video/mp4" />
+            </video>
+            <video class="video-border" autoplay controls muted loop playsinline>
+              <source src="./static/videos/scope/7-2021.09.16.15.00.21_veh-45_00806_01354_5051ccd75314515c.mp4" type="video/mp4" />
+            </video>
+            <video class="video-border" autoplay controls muted loop playsinline>
+              <source src="./static/videos/pluto/8-2021.09.16.13.05.51_veh-42_01597_01965_4aeaa8bebf7a57f1.mp4" type="video/mp4" />
+            </video>
+            <video class="video-border" autoplay controls muted loop playsinline>
+              <source src="./static/videos/th20/8-2021.09.16.13.05.51_veh-42_01597_01965_4aeaa8bebf7a57f1.mp4" type="video/mp4" />
+            </video>
+            <video class="video-border" autoplay controls muted loop playsinline>
+              <source src="./static/videos/scope/8-2021.09.16.13.05.51_veh-42_01597_01965_4aeaa8bebf7a57f1.mp4" type="video/mp4" />
+            </video>
+            <!-- <video class="video-border" autoplay controls muted loop playsinline>
             <source src="./static/videos/pluto/9-2021.06.28.21.29.39_veh-12_01856_02160_ac67e458c88d5d78.mp4"
               type="video/mp4">
           </video>
@@ -492,19 +450,16 @@ class="navbar-burger" aria-label="menu" aria-expanded="false">
             <source src="./static/videos/scope/9-2021.06.28.21.29.39_veh-12_01856_02160_ac67e458c88d5d78.mp4"
               type="video/mp4">
           </video>           -->
-          <video class="video-border" autoplay controls muted loop playsinline>
-            <source src="./static/videos/pluto/10-2021.06.28.21.23.50_veh-47_04712_05316_8160c5b3a5c9555e.mp4"
-              type="video/mp4">
-          </video>
-          <video class="video-border" autoplay controls muted loop playsinline>
-            <source src="./static/videos/th20/10-2021.06.28.21.23.50_veh-47_04712_05316_8160c5b3a5c9555e.mp4"
-              type="video/mp4">
-          </video>
-          <video class="video-border" autoplay controls muted loop playsinline>
-            <source src="./static/videos/scope/10-2021.06.28.21.23.50_veh-47_04712_05316_8160c5b3a5c9555e.mp4"
-              type="video/mp4">
-          </video>          
-          <!-- <video class="video-border" autoplay controls muted loop playsinline>
+            <video class="video-border" autoplay controls muted loop playsinline>
+              <source src="./static/videos/pluto/10-2021.06.28.21.23.50_veh-47_04712_05316_8160c5b3a5c9555e.mp4" type="video/mp4" />
+            </video>
+            <video class="video-border" autoplay controls muted loop playsinline>
+              <source src="./static/videos/th20/10-2021.06.28.21.23.50_veh-47_04712_05316_8160c5b3a5c9555e.mp4" type="video/mp4" />
+            </video>
+            <video class="video-border" autoplay controls muted loop playsinline>
+              <source src="./static/videos/scope/10-2021.06.28.21.23.50_veh-47_04712_05316_8160c5b3a5c9555e.mp4" type="video/mp4" />
+            </video>
+            <!-- <video class="video-border" autoplay controls muted loop playsinline>
             <source src="./static/videos/pluto/11-2021.06.28.18.30.41_veh-12_04521_05146_29686b1e8e6859ca.mp4"
               type="video/mp4">
           </video>
@@ -512,7 +467,7 @@ class="navbar-burger" aria-label="menu" aria-expanded="false">
             <source src="./static/videos/scope/11-2021.06.28.18.30.41_veh-12_04521_05146_29686b1e8e6859ca.mp4"
               type="video/mp4">
           </video> -->
-          <!-- <video class="video-border" autoplay controls muted loop playsinline>
+            <!-- <video class="video-border" autoplay controls muted loop playsinline>
             <source src="./static/videos/pluto/12-2021.06.28.17.13.34_veh-16_04046_04493_a489a4faafbd5c67.mp4"
               type="video/mp4">
           </video>
@@ -529,8 +484,7 @@ class="navbar-burger" aria-label="menu" aria-expanded="false">
               type="video/mp4">
           </video> -->
 
-
-          <!-- <video class="video-border" autoplay controls muted loop playsinline>
+            <!-- <video class="video-border" autoplay controls muted loop playsinline>
             <source src="./static/videos/2021.06.07.12.01.13_veh-47_02509_02927_935e480ef74e5cd8.mp4"
               type="video/mp4">
           </video>
@@ -651,7 +605,7 @@ class="navbar-burger" aria-label="menu" aria-expanded="false">
             <source src="./static/videos/2021.09.13.13.03.21_veh-28_00356_00576_1b9234d32b0750bb.mp4"
               type="video/mp4">
           </video> -->
-          <!-- <video class="video-border" autoplay controls muted loop playsinline>
+            <!-- <video class="video-border" autoplay controls muted loop playsinline>
             <source src="./static/videos/2021.09.13.13.03.21_veh-28_01082_01561_f56e788506ca570f.mp4"
               type="video/mp4">
           </video>
@@ -659,25 +613,21 @@ class="navbar-burger" aria-label="menu" aria-expanded="false">
             <source src="./static/videos/2021.09.13.17.46.46_veh-28_01192_01517_8ebcb8a509965dc0.mp4"
               type="video/mp4">
           </video> -->
+          </div>
         </div>
-
-
       </div>
-    </div>
-  </section>
+    </section>
 
-
-  <!-- <section class="section" id="BibTeX">
+    <!-- <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
       <pre><code></code></pre>
     </div>
   </section> -->
 
-
-  <footer class="footer">
-    <div class="container">
-      <!-- <div class="content has-text-centered">
+    <footer class="footer">
+      <div class="container">
+        <!-- <div class="content has-text-centered">
         <a class="icon-link" href="./static/videos/nerfies_paper.pdf">
           <i class="fas fa-file-pdf"></i>
         </a>
@@ -685,24 +635,19 @@ class="navbar-burger" aria-label="menu" aria-expanded="false">
           <i class="fab fa-github"></i>
         </a>
       </div> -->
-      <div class="columns is-centered">
-        <div class="content">
-          <p>
-            Project page is inspired by <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
-          </p>
+        <div class="columns is-centered">
+          <div class="content">
+            <p>Project page is inspired by <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.</p>
+          </div>
         </div>
       </div>
-    </div>
-  </footer>
+    </footer>
 
-  <script type="text/javascript">
-    var videos = document.querySelectorAll('video');
-    for (var i = 0; i < videos.length; i++) {
-      videos[i].playbackRate = 2.0;
-    }
-  </script>
-
-</body>
-
-
+    <script type="text/javascript">
+      var videos = document.querySelectorAll("video");
+      for (var i = 0; i < videos.length; i++) {
+        videos[i].playbackRate = 2.0;
+      }
+    </script>
+  </body>
 </html>
