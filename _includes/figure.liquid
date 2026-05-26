@@ -74,7 +74,7 @@
       {% elsif site.lazy_loading_images %}
         loading="lazy"
       {% endif %}
-      onerror="this.onerror=null; $('.responsive-img-srcset').remove();"
+      onerror="if (this.dataset.fallbackApplied === '1') return; this.dataset.fallbackApplied = '1'; var picture = this.closest('picture'); if (picture) { picture.querySelectorAll('source.responsive-img-srcset').forEach(function (el) { el.remove(); }); } var rawSrc = this.getAttribute('src'); this.src=''; this.src=rawSrc;"
     >
   </picture>
 

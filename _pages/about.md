@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: PhD. candidate in Robotics, HKUST.
+subtitle: Ph.D. in Robotics, HKUST.
 
 profile:
   align: right
@@ -22,7 +22,7 @@ social: true # includes social icons at the bottom of the page
 
 <!-- Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them. -->
 
-I am pursuing a Ph.D. degree in Robotics and Automation Systems at the **Hong Kong University of Science and Technology** (HKUST) under the supervision of [prof. Jun MA](https://personal.hkust-gz.edu.cn/junma/index.html).
+I received my Ph.D. degree in Robotics and Automation Systems from the **Hong Kong University of Science and Technology** (HKUST), under the supervision of [Prof. Jun Ma](https://personal.hkust-gz.edu.cn/junma/index.html).
 
 My primary research field is **learning-based planning and control** for autonomous driving. I also have some experience on 3D reconstruction, traditional optimization/sampling based planning methods and CUDA programming in projects.
 
@@ -30,4 +30,4 @@ As to my educational background, I hold an M.Sc. degree from the **Hong Kong Uni
 
 I aim to leverage my expertise in mechanical engineering and artificial intelligence to break the technology boundaries of intelligent systems, introducing technology to the masses.
 
-Served as reviewer for RAL, ICML, IROS, and ICRA.
+Served as reviewer for TITS，RAL, ICML, IROS, and ICRA.
