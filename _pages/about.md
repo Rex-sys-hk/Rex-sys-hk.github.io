@@ -30,4 +30,4 @@ As to my educational background, I hold an M.Sc. degree from the **Hong Kong Uni
 
 I aim to leverage my expertise in mechanical engineering and artificial intelligence to break the technology boundaries of intelligent systems, introducing technology to the masses.
 
-Served as reviewer for TITS，RAL, ICML, IROS, and ICRA.
+Served as reviewer for TITS, RAL, ICML, IROS, and ICRA.
